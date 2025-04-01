@@ -1,0 +1,270 @@
+/* Reset de estilos padrões */
+
+html,
+body {
+  height: 100%;
+  font-family: "Roboto Flex-Regular", Helvetica, Arial, sans-serif;
+  background-color: #151513;
+  color: #ffffff;
+  height: 100%;
+  overflow-x: hidden;
+  /* Garante que não haja rolagem horizontal */
+}
+
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container principal */
+.container {
+  height: 100%;
+  width: 100%;
+  max-width: 375px;
+  /* Largura para telas menores */
+  margin: 0 auto;
+  /* Centraliza o container */
+  padding: 10px;
+}
+
+/* Header */
+header {
+  display: flex;
+  flex-direction: column;
+  /* Organiza os itens verticalmente */
+  align-items: flex-start;
+  /* Logo no canto esquerdo */
+  gap: 10px;
+}
+
+.logo {
+  position: absolute;
+  left: 3%;
+  top: 50px;
+  width: 100px;
+  /* Tamanho ajustado da logo */
+  height: auto;
+  align-self: flex-start;
+  /* Garante que permaneça no canto esquerdo */
+  animation: slide-in 1s ease-out;
+}
+
+
+/* Títulos */
+.main-title {
+  font-size: 24px;
+  /* Tamanho para dispositivos móveis */
+  text-align: center;
+  margin-top: 130px;
+  animation: slide-in-right 1s ease-out;
+}
+
+.subtitle {
+  position: relative;
+  top: 20px;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 160px;
+  opacity: 0.8;
+  animation: slide-in-right 1s ease-out;
+}
+
+/* Seção do QR Code */
+.qr-code-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 50%;
+  margin-top: 20px;
+}
+
+.qrcode {
+  position: relative;
+  bottom: 101px;
+  width: 274px;
+  /* QR Code tamanho responsivo */
+  height: 274px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  z-index: 2;
+  animation: fadeIn 1s ease-in, bounce 2s infinite
+}
+
+.generate-button {
+  position: absolute;
+  width: 90%;
+  /* Botão ocupa quase toda a largura */
+  max-width: 327px;
+  height: 48px;
+  /* Altura ajustada */
+  border: none;
+  border-radius: 16px;
+  background: radial-gradient(50% 50% at 128% 69%,
+      rgba(255, 255, 255, 0.7) 0%,
+      rgba(255, 255, 255, 0) 100%),
+    linear-gradient(193deg,
+      rgba(255, 220, 113, 1) 0%,
+      rgba(233, 188, 50, 1) 100%);
+  color: #151513;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  margin-bottom: 20px;
+  animation: slide-in 1s ease-out, pulsar 1.5s infinite;
+  z-index: 5;
+  bottom: 40px;
+}
+
+/* Rodapé */
+footer {
+  display: flex;
+  justify-content: flex-start;
+  /* Texto no canto esquerdo */
+  align-items: flex-end;
+  margin-top: 20px;
+}
+
+.developer-credit {
+  position: absolute;
+  left: 2%;
+  top: 95%;
+  font-size: 12px;
+  color: #7d7d7d;
+  animation: slide-up 1s ease-out;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+  .logo {
+    width: 80px;
+    /* Ajusta logo para telas muito pequenas */
+  }
+  
+
+  .qrcode {
+    width: 274px;
+    height: 274px;
+  }
+
+  .generate-button {
+    font-size: 12px;
+    height: 44px;
+    
+  }
+  
+}
+
+.bg {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 392px;
+  width: 276px;
+  height: 491px;
+  z-index: 1;
+}
+
+.campo-texto-grande {
+  position: relative;
+  bottom: 101px;
+  width: 170%;
+  margin-bottom: 110px;
+  height: 180px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  z-index: 5;
+}
+
+
+@keyframes bounce {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+    /* Posição original */
+  }
+
+  40% {
+    transform: translateY(-30px);
+    /* Vai para cima */
+  }
+
+  60% {
+    transform: translateY(-15px);
+    /* Salta menor */
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    /* Começa transparente */
+  }
+
+  100% {
+    opacity: 1;
+    /* Totalmente visível */
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(-100%);
+    /* Começa fora da tela */
+  }
+
+  100% {
+    transform: translateX(0);
+    /* Fica na posição original */
+  }
+}
+
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(100%);
+    /* Começa fora da tela à direita */
+  }
+
+  100% {
+    transform: translateX(0);
+    /* Retorna à posição original */
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(400%);
+    /* Começa fora da tela (acima) */
+  }
+
+  100% {
+    transform: translateY(0);
+    /* Termina na posição original */
+  }
+}
+
+@keyframes pulsar {
+  0% {
+    transform: scale(1);
+    /* Tamanho normal */
+  }
+
+  50% {
+    transform: scale(1.1);
+    /* Expande o elemento */
+  }
+
+  100% {
+    transform: scale(1);
+    /* Volta ao tamanho original */
+  }
+}

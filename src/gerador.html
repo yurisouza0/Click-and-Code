@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="../src/style/globals.css" />
+    <link rel="stylesheet" href="../src/style/style.css" />
+</head>
+
+<body>
+    <main class="start">
+        <div class="container">
+            <header>
+                <a href="../index.html">
+
+                    <img class="logo"  src="../src/img/logo.png" alt="Click & Code Logo" />
+                </a>
+            </header>
+            <h1 class="main-title">Click &amp; Code</h1>
+            <p class="subtitle">Seu QR Code em um clique!</p>
+            <section class="qr-code-section">
+                <textarea class="campo-texto-grande" placeholder=""></textarea>
+                <img class="bg" src="../src/img/bg.svg" alt="Background decoration" />
+                <img class="qrcode" src="" alt="" style="display: none" />
+                <button class="generate-button" style="animation: none;" type="button">
+                    <span class="button-text">GERAR AGORA!</span>
+                </button>
+            </section>
+            <footer>
+                <p class="developer-credit">Developed by Yuri</p>
+            </footer>
+        </div>
+    </main>
+
+    <script>
+const input = document.querySelector(".campo-texto-grande");
+const textosPlaceholder = [
+    "Seu site, redes sociais, Wi-Fi... digite aqui e veja o QR ganhar vida!",
+    "Que tal usar o QR para compartilhar seu site?",
+    "Coloque o link do seu Instagram, email ou qualquer coisa!",
+    "Digite algo interessante e veja a mágica acontecer!"
+];
+let indiceTexto = 0; // Índice do texto atual
+let indiceChar = 0; // Índice do caractere atual
+
+function digitarPlaceholder() {
+    const textoAtual = textosPlaceholder[indiceTexto];
+
+    if (indiceChar < textoAtual.length) {
+        input.placeholder += textoAtual.charAt(indiceChar); // Adiciona a próxima letra
+        indiceChar++;
+        setTimeout(digitarPlaceholder, 20); // Velocidade de digitação
+    } else {
+        setTimeout(() => {
+            indiceChar = 0; // Reinicia o índice do caractere
+            input.placeholder = ""; // Limpa o placeholder
+            indiceTexto = (indiceTexto + 1) % textosPlaceholder.length; // Alterna para o próximo texto
+            digitarPlaceholder(); // Chama novamente a função
+        }, 2000); // Pausa antes de mudar o texto
+    }
+}
+
+// Inicia o efeito de digitação
+digitarPlaceholder();
+    </script>
+
+    <script src="./script/gerador.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,374 @@
+.start {
+  background-color: #151513;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.start .div {
+  background-color: #151513;
+  width: 375px;
+  height: 812px;
+
+}
+
+.start .logo {
+  width: 74px;
+  height: 100%;
+  top: 50px;
+  left: 25px;
+  object-fit: cover;
+  animation: slide-in 1s ease-out;
+}
+
+.start .overlap-group {
+  position: absolute;
+  width: 337px;
+  height: 543px;
+  top: 269px;
+  left: 14px;
+}
+
+.start .text-wrapper {
+  position: absolute;
+  width: 154px;
+  top: 513px;
+  left: 0;
+  font-family: "Roboto Flex-Regular", Helvetica;
+  font-weight: 400;
+  color: #7d7d7d;
+  font-size: 13px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.start .bg {
+
+  width: 276px;
+  height: 491px;
+  top: 200px;
+  animation: fadeIn 1s ease-in;
+}
+
+
+
+.start .button {
+  all: unset;
+  box-sizing: border-box;
+  display: flex;
+  width: 327px;
+  height: 56px;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  top: 412px;
+  border-radius: 16px;
+  background: radial-gradient(50% 50% at 128% 69%,
+      rgba(255, 255, 255, 0.7) 0%,
+      rgba(255, 255, 255, 0) 100%),
+    linear-gradient(193deg,
+      rgba(255, 220, 113, 1) 0%,
+      rgba(233, 188, 50, 1) 100%);
+  z-index: 12;
+}
+
+.start .open-application {
+
+  width: fit-content;
+  font-family: "Roboto Flex-Regular", Helvetica;
+  font-weight: 400;
+  color: #151513;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.start .qrcode {
+  left: 14%;
+  width: 274px;
+  height: 274px;
+  top: 0;
+  object-fit: cover;
+  animation: fadeIn 1s ease-in, bounce 2s infinite;
+}
+
+
+@keyframes bounce {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+    /* Posição original */
+  }
+
+  40% {
+    transform: translateY(-30px);
+    /* Vai para cima */
+  }
+
+  60% {
+    transform: translateY(-15px);
+    /* Salta menor */
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    /* Começa transparente */
+  }
+
+  100% {
+    opacity: 1;
+    /* Totalmente visível */
+  }
+}
+
+.start .click-code {
+  position: absolute;
+  top: 174px;
+  left: 87px;
+  font-family: "Roboto Flex-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 32px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.start .p {
+  position: absolute;
+  top: 220px;
+  left: 83px;
+  opacity: 0.7;
+  font-family: "Roboto Flex-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.start .line {
+  position: absolute;
+  width: 327px;
+  height: 1px;
+  top: 95px;
+  left: 24px;
+  object-fit: cover;
+}
+
+/* Original CSS code should be injected here */
+
+body {
+  background-color: #151513;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Roboto Flex-Regular", Helvetica, Arial, sans-serif;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+header {
+  padding: 50px 25px 0;
+}
+
+.header-line {
+
+  width: 327px;
+  height: 1px;
+  top: 10px;
+  background-color: #7d7d7d;
+  border: none;
+
+}
+
+.main-title {
+  text-align: center;
+  color: #ffffff;
+  font-size: 30px;
+  line-height: 1.2;
+  animation: slide-in-right 1s ease-out;
+  display: none;
+}
+
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(100%);
+    /* Começa fora da tela à direita */
+  }
+
+  100% {
+    transform: translateX(0);
+    /* Retorna à posição original */
+  }
+}
+
+.subtitle {
+  margin-top: 14px;
+  text-align: center;
+  opacity: 0.7;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 1.2;
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes slide-down {
+  0% {
+    transform: translateY(-100%);
+    /* Começa fora da tela (acima) */
+  }
+
+  100% {
+    transform: translateY(0);
+    /* Termina na posição original */
+  }
+}
+
+.qr-code-section {
+  bottom: 110px;
+  height: 543px;
+}
+
+.bg,
+.qrcode {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.bg {
+  top: 52px;
+  width: 276px;
+  height: 491px;
+  z-index: 1;
+}
+
+.qrcode {
+  width: 274px;
+  height: 274px;
+  object-fit: cover;
+  z-index: 2;
+}
+
+.generate-button {
+  top: 340px;
+  left: 6%;
+  z-index: 6;
+
+  width: 327px;
+  height: 56px;
+  border: none;
+  border-radius: 16px;
+  background: radial-gradient(50% 50% at 128% 69%,
+      rgba(255, 255, 255, 0.7) 0%,
+      rgba(255, 255, 255, 0) 100%),
+    linear-gradient(193deg,
+      rgba(255, 220, 113, 1) 0%,
+      rgba(233, 188, 50, 1) 100%);
+  cursor: pointer;
+  z-index: 3;
+  animation: slide-in 1s ease-out, pulsar 1.5s infinite;
+}
+
+@keyframes pulsar {
+  0% {
+    transform: scale(1);
+    /* Tamanho normal */
+  }
+
+  50% {
+    transform: scale(1.1);
+    /* Expande o elemento */
+  }
+
+  100% {
+    transform: scale(1);
+    /* Volta ao tamanho original */
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(-100%);
+    /* Começa fora da tela */
+  }
+
+  100% {
+    transform: translateX(0);
+    /* Fica na posição original */
+  }
+}
+
+
+.button-text {
+  color: #151513;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.developer-credit {
+  position: relative;
+  bottom: 50px;
+  left: 14px;
+  color: #7d7d7d;
+  font-size: 13px;
+  animation: slide-up 1s ease-out;
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(400%);
+    /* Começa fora da tela (acima) */
+  }
+
+  100% {
+    transform: translateY(0);
+    /* Termina na posição original */
+  }
+}
+
+@media (max-width: 374px) {
+  .container {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .generate-button {
+    width: calc(100% - 20px);
+  }
+}
+
+
+.campo-texto-grande {
+  width: 100%;
+  height: 150px;
+  margin-top: 99px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  z-index: 5;
+  position: absolute;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Click & Code</title>
+    <link rel="stylesheet" href="./src/style/globals.css" />
+    <link rel="stylesheet" href="./src/style/style.css" />
+  </head>
+  <body>
+    <main class="start">
+      <div class="container">
+          <header>
+              <a href="./index.html">
+
+                  <img class="logo"  src="./src/img/logo.png" alt="Click & Code Logo" />
+              </a>
+          </header>
+          <h1 class="main-title">Click &amp; Code</h1>
+          <p class="subtitle">Seu QR Code em um clique!</p>
+          <section class="qr-code-section">
+            <img class="qrcode" src="./src/img/code.png" alt=""  />
+              <img class="bg" src="./src/img/bg.svg" alt="Background decoration" />
+              <button class="generate-button" type="button">
+                <a href="./src/gerador.html"></a>
+                  <span class="button-text">GERAR AGORA!</span>
+              </button>
+          </section>
+          <footer>
+              <p class="developer-credit">Developed by Yuri</p>
+          </footer>
+      </div>
+  </main>
+    <script>
+      const botao = document.getElementsByClassName("generate-button")[0];
+      botao.addEventListener("click", function () {
+        window.location.href = "./src/gerador.html";
+      });
+    </script>
+  </body>
+</html>
