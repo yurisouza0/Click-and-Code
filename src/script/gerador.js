@@ -39,8 +39,7 @@ botao.addEventListener("click", function () {
     // Faz o QR Code aparecer e oculta o campo de digitação
     qrCodeImg.style.display = "block";
     qrCodeImg.style.position = "relative";
-    qrCodeImg.style.animation = "girar 0.5s linear";
-    qrCodeImg.style.transition = "all 0.5s ease-in-out";
+    qrCodeImg.style.animation = "crescer 0.7s ease-in";
     textarea.style.display = "none";
 
 
