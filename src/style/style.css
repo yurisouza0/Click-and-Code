@@ -167,7 +167,6 @@ footer {
   top: 392px;
   width: 276px;
   height: 491px;
-  animation: fadeIn 2s ease-in;
   z-index: 1;
 }
 
@@ -267,5 +266,14 @@ footer {
   100% {
     transform: scale(1);
     /* Volta ao tamanho original */
+  }
+}
+
+@keyframes girar {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
   }
 }
