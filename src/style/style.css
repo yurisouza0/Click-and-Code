@@ -167,6 +167,7 @@ footer {
   top: 392px;
   width: 276px;
   height: 491px;
+  animation: fadeIn 1s ease-in;
   z-index: 1;
 }
 
