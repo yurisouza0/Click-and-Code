@@ -39,8 +39,10 @@ botao.addEventListener("click", function () {
     // Faz o QR Code aparecer e oculta o campo de digitação
     qrCodeImg.style.display = "block";
     qrCodeImg.style.position = "relative";
-    qrCodeImg.style.animation = "none";
+    qrCodeImg.style.animation = "girar 0.5s linear";
+    qrCodeImg.style.transition = "all 0.5s ease-in-out";
     textarea.style.display = "none";
+
 
     // Altera o texto do botão para "Gerar novamente"
     textoDoBotao.innerText = "GERAR NOVAMENTE";
