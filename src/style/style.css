@@ -1,4 +1,3 @@
-/* Reset de estilos padrões */
 
 html,
 body {
@@ -22,9 +21,7 @@ body {
   height: 100%;
   width: 100%;
   max-width: 375px;
-  /* Largura para telas menores */
   margin: 0 auto;
-  /* Centraliza o container */
   padding: 10px;
 }
 
