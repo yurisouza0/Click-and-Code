@@ -269,11 +269,11 @@ footer {
   }
 }
 
-@keyframes girar {
+@keyframes crescer {
   from {
-      transform: rotate(0deg);
+      transform: scale(0);
   }
   to {
-      transform: rotate(360deg);
+      transform: scale(1); /* Aumenta 20% o tamanho */
   }
 }
