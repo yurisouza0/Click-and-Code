@@ -49,14 +49,14 @@ function digitarPlaceholder() {
     const textoAtual = textosPlaceholder[indiceTexto];
 
     if (indiceChar < textoAtual.length) {
-        input.placeholder += textoAtual.charAt(indiceChar); // Adiciona a próxima letra
+        input.placeholder += textoAtual.charAt(indiceChar); 
         indiceChar++;
-        setTimeout(digitarPlaceholder, 20); // Velocidade de digitação
-    } else {
+        setTimeout(digitarPlaceholder, 20); 
+    } else {ocidade 
         setTimeout(() => {
             indiceChar = 0; // Reinicia o índice do caractere
             input.placeholder = ""; // Limpa o placeholder
-            indiceTexto = (indiceTexto + 1) % textosPlaceholder.length; // Alterna para o próximo texto
+            indiceTexto = (indiceTexto + 1) % textosPlaceholder.length; 
             digitarPlaceholder(); // Chama novamente a função
         }, 2000); // Pausa antes de mudar o texto
     }
