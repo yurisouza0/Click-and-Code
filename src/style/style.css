@@ -146,6 +146,7 @@ footer {
   width: 276px;
   height: 491px;
   z-index: 1;
+  animation: fadeIn 1.5s ease-in;
 }
 
 .campo-texto-grande {
